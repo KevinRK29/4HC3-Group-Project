@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+    --green:#c00000;
+    --black:#000000;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; 
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+.button{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color:#fff;
+    background: var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding:.8rem 3rem;
+}
+
+.button:hover{
+    background: var(--green);
+    letter-spacing: .1rem;
+}
+
+.card{
+    margin: auto;
+    width: 65%;
+    padding: 3px;
+}
+
+.image-container {
+    float:left; 
+    background:rgb(255, 255, 255);
+    width:50%;
+    height: 25rem;
+    padding:1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+#image{
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+.description-container {
+    float:right; 
+    background:rgb(255, 255, 255);
+    width:50%;
+    height: 25rem;
+    padding:1 rem;
+    overflow: hidden;
+    position: relative;
+}
+
+#qty{
+    width: 8vh;
+    margin-top: 2vh;
+}
+
+#add{
+    margin-top: 2vh;
+    display: inline-block;
+    font-size: 1.3rem;
+    color:#fff;
+    background: var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding:.8rem 3rem;
+}
+
+#add:hover{
+    background: var(--green);
+    letter-spacing: .1rem;
+}
+

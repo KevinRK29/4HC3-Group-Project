@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4HC3 Restaurant App</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="itemdetailstyle.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Item Details</h1>
+    </header>
+
+    <div class="card">
+        <div class="image-container">
+            <img id="image" src="images/menu-1.jpg" alt="itemname">
+        </div>
+        <div class="description-container">
+          <h2 style="margin-top: 2vh;"><b>Pizza</b></h2>
+          <p style="margin-top: 2vh;"><i>500 Calories</i></p>
+          <p style="margin-top: 0vh;"><b>$30.00 CAD</b></p>
+          <p style="margin-top: 2vh;">Cheese pizza with pizza sauce and cheese</p>
+          <form style="margin-top: 2vh;">
+            <p><label for="special-instructions"><b>Special Instructions:</b></label></p>
+            <textarea id="special-instructions" name="special-instructions" rows="4" cols="50" style="resize: none;"></textarea>
+            <br>
+            <label for="qty">Qty:</label>
+            <input type="number" id="qty" name="qty" min="0" step="1" onkeydown="return false;" style="width: 8vh">
+          </form>
+          <button id="add">Add to cart</button>
+        </div>
+    </div>
+
+</body>

@@ -1,4 +1,4 @@
-{
+var data = {
     "items":[
     { 
         "id": 1,

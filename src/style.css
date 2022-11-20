@@ -1,0 +1,21 @@
+.image-container {
+    float:left; 
+    background:rgb(255, 255, 255);
+    width:50%;
+}
+
+.description-container {
+    float:right; 
+    background:rgb(255, 255, 255);
+    width:50%;
+}
+
+#qty{
+    width: 8vh;
+    margin-top: 2vh;
+}
+
+#add{
+    margin-top: 2vh;
+}
+

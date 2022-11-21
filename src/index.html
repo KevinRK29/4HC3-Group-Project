@@ -65,6 +65,8 @@
             <a href="#" class="btn">Checkout</a>
         </div>
         
+        <button class="login-button" onclick="toggleLogin()"><i class="fas fa-user"></i></button>
+        <a href="#" class="fas fa-shopping-cart"></a>
     </div>
 
 </header>
@@ -343,6 +345,24 @@
 </section>
 
 <!-- drinks section ends -->
+
+<!-- cart popup -->
+
+<!-- login popup -->
+<div class="form-popup" id="myForm">
+    <form class="form-container">
+      <h1>Login</h1>
+  
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+  
+      <button type="submit" class="btn">Login</button>
+      <button type="button" class="btn cancel" onclick="toggleLogin()">Close</button>
+    </form>
+</div>
 
 <!-- custom js file link -->
 <script src="app.js"></script>

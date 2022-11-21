@@ -178,6 +178,8 @@ header .icons #menu-bars{
 }
 
 .shopping-cart{
+    overflow-y:auto;
+    max-height:30rem;
     display: none;
     position: fixed;
     top: 8rem;
@@ -191,12 +193,23 @@ header .icons #menu-bars{
 }
 
 .shopping-cart .btn {
-    padding: 1rem 1rem;
     border: none;
     cursor: pointer;
     width: 100%;
     margin-bottom:1rem;
     text-align: center;
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color:#fff;
+    background: var(--black);
+    border-radius: .5rem;
+    padding:.8rem 3rem;
+}
+
+.shopping-cart .btn:hover{
+    background: var(--green);
+    letter-spacing: .1rem;
 }
 
 .shopping-cart .cart-item{

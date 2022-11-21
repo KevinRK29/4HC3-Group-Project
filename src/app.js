@@ -70,10 +70,10 @@ function addCartItem(item, quantity) {
         <i class="fas fa-plus" onClick="editCart('` + item + `', 1)"></i>
         <i class="fas fa-minus" onClick="editCart('` + item + `', -1)"></i>
         <i class="fas fa-trash" onClick="removeCartItem('` + item + `')"></i>
-        <img src="images/menu-4.jpg" alt="" />
+        <img src=` + data.items.find(e => e.name == item).imageref + ` alt="" />
         <div class="cart-content">
           <h3>` + item + `</h3>
-          <span class="price">$4.99</span>
+          <span class="price">` + data.items.find(e => e.name == item).price + `</span>
           <span class="quantity" id="` + item + `-amount">qty: ` + quantity + `</span>
         </div>
       </div>`

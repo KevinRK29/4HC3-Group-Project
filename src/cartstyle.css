@@ -439,6 +439,8 @@ header .icons #menu-bars{
 }
 
 .shopping-cart{
+    overflow-y:auto;
+    max-height:30rem;
     display: none;
     position: fixed;
     top: 8rem;

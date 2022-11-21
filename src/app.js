@@ -33,3 +33,8 @@ window.onscroll = () =>{
 }
 
 window.onload = fadeOut;
+
+function toggleLogin() {
+  main = document.getElementById("myForm")
+  main.style.display === "block" ? main.style.display = "none" : main.style.display = "block";
+}

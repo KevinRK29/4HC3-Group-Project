@@ -125,6 +125,64 @@ header .icons #menu-bars{
     display: none;
 }
 
+header .shopping-cart{
+    position: absolute;
+    top: 110%;
+    right: 2rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width:30rem;
+    background: #fff;
+}
+
+header .shopping-cart .cart-item{
+    display: flex;
+    align-items:center;
+    gap: 1rem;
+    position: relative;
+    margin: 1rem 0;
+}
+
+header .shopping-cart .cart-item img{
+    height: 10rem;
+
+}
+
+header .shopping-cart .cart-item .fa-trash{
+    font-size: 2rem;
+    position: absolute;
+    top: 50%; right: 2rem;
+    cursor: pointer;
+    color:var(--light-color);
+    transform: translateY(-50%);
+}
+
+header .shopping-cart .cart-item .fa-trash:hover{
+    color:var(--orange);
+}
+
+header .shopping-cart .cart-item .content h3{
+    color: var(--black);
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+}
+
+header .shopping-cart .cart-item .content span{
+    color: var(--light-color);
+    font-size: 1.6rem;
+}
+
+header .shopping-cart .cart-item .content .quantity{
+    padding-left: 1rem;
+}
+
+header .shopping-cart .total{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--black);
+}
 .menu .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));

@@ -62,7 +62,7 @@ label, img {
 input {
     font: inherit;
     width: 100%;
-    /* border: none; */
+    border: none;
 }
 
 input:focus {
@@ -209,7 +209,7 @@ header .icons #menu-bars{
 }
 
 .payment-method .card {
-    border-color: var(--green);
+    border: 3px solid var(--green);
 }
 
 .payment-method .method i{
@@ -219,19 +219,20 @@ header .icons #menu-bars{
 .label-default{
     padding-left: 10px;
     margin-bottom: 5px;
-    font-size: 15px;
-    color: gray;
+    font-size: var(--fs-14);
+    color: var(--spanish-gray);
 }
 
 .input-default {
-    border-radius: 2px;
-    color: gray;
+    background: var(--platinum);
+    border-radius: var(--radius);
+    color: var(--davys-gray);
 }
 
 .payment-form input {
     padding: 10px 15px;
-    font-size: 18px;
-    font-weight: bolder;
+    font-size: var(--fs-18);
+    font-weight: var(--fw-5);
 }
 
 .cardholder-name,
@@ -256,7 +257,7 @@ header .icons #menu-bars{
 }
 
 .expiry-date .input-flex {
-    color: gray;
+    color: var(--spanish-gray);
     gap: 13px;
 }
 
@@ -265,27 +266,29 @@ header .icons #menu-bars{
 }
 
 .btn{
-    border-radius: 2px;
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color:#fff;
+    background: var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding:.8rem 3rem;
 }
+
+.btn:hover{
+    background: var(--green);
+    letter-spacing: .1rem;
+}
+/* .btn{
+    border-radius: var(--radius);
+} */
 
 .btn:active{
     transform: scale(0.99);
 }
 
-.btn:focus {
-    color: white;
-    background: lightblue;
-    outline: 2px solid lightblue;
-    outline-offset: 2px;
-}
-
-.btn-primary {
-    background: lightblue;
-    font-weight: bolder;
-    color: white;
-    padding: 13px 45px;
-}
-
+/* CART STUFF */
 .cart {
     width: 40%;
     display: flex;
@@ -294,7 +297,7 @@ header .icons #menu-bars{
 }
 
 .cart-item {
-    padding: 40px;
+    padding: 40px var(--px);
     margin-bottom: auto;
 }
 
@@ -310,14 +313,14 @@ header .icons #menu-bars{
 }
 
 .card .product-img {
-    border-radius: 2px;
+    border-radius: var(--radius);
     height: 10rem;
 }
 
 .card .detail .product-name {
-    font-weight: bolder;
-    font-size: 15px;
-    color: gray;
+    font-weight: var(--fw-6);
+    font-size: var(--fs-15);
+    color: var(--dim-gray);
     margin-bottom: 10px;
 }
 
@@ -333,7 +336,7 @@ header .icons #menu-bars{
 }
 
 .product-qty button {
-    background: white;
+    background: var(--platinum);
     width: 20px;
     height: 20px;
     display: flex;
@@ -342,7 +345,7 @@ header .icons #menu-bars{
 }
 
 .product-qty button:active,
-.product-x-btn:active {
+.product-x-btn:active i{
     transform: scale(0.95); 
 }
 
@@ -358,11 +361,15 @@ header .icons #menu-bars{
 
 .product-x-btn i{
     font-size: 25px;
-    color:var(--light-color);
+    color:var(--quick-silver);
 }
 
 .product-x-btn:hover i {
-    color:var(--orange);
+    color:var(--orange); 
+}
+
+.amount {
+    padding: 40px var(--px);
 }
 
 .amount > div {
@@ -375,9 +382,9 @@ header .icons #menu-bars{
 }
 
 .amount .total {
-    font-size: 18px;
-    font-weight: bolder;
-    color: var(--light-color);
+    font-size: var(--fs-18);
+    font-weight: var(--fw-7);
+    color: var(--onyx);
 }
 
 .form-popup {

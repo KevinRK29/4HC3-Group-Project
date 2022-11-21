@@ -17,6 +17,11 @@
 </head>
 
 <body>
+    <script src="data.js"></script>
+    <script>
+        //get current item id from menu page
+        var currentItemId = 3; //test value
+    </script>
 
     <header>
 
@@ -41,10 +46,10 @@
             <img id="image" src="images/menu-1.jpg" alt="itemname">
         </div>
         <div class="description-container">
-          <h2 style="margin-top: 2vh;"><b>Pizza</b></h2>
-          <p style="margin-top: 2vh;"><i>500 Calories</i></p>
-          <p style="margin-top: 0vh;"><b>$30.00 CAD</b></p>
-          <p style="margin-top: 2vh;">Cheese pizza with pizza sauce and cheese</p>
+          <h2 id="name" style="margin-top: 2vh;"><b>placeholder</b></h2>
+          <p id="cals" style="margin-top: 2vh;"><i id="calsid">placeholder</i></p>
+          <p id="price" style="margin-top: 0vh;"><b id="priceid">placeholder</b></p>
+          <p id="description" style="margin-top: 2vh;"><p id="descid">placeholder</p></p>
           <form style="margin-top: 2vh;">
             <p><label for="special-instructions"><b>Special Instructions:</b></label></p>
             <textarea id="special-instructions" name="special-instructions" rows="4" cols="50" style="resize: none;"></textarea>
@@ -55,5 +60,13 @@
           <button id="add">Add to cart</button>
         </div>
     </div>
+
+    <script>
+        document.getElementById("name").innerHTML =  data.items[currentItemId].name ;
+        document.getElementById("calsid").innerHTML = data.items[currentItemId].calories;
+        document.getElementById("priceid").innerHTML = data.items[currentItemId].price;
+        document.getElementById("descid").innerHTML = data.items[currentItemId].description;
+        console.log(data.items[currentItemId].name)
+    </script>
 
 </body>

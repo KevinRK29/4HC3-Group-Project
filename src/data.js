@@ -6,7 +6,7 @@ var data = {
         "calories": "500",
         "price": "$5.00",
         "imageref": "images/menu-1.jpg",
-        "description": "Lorem Ipsum Dolor Sit, Amet Consectetur Adipisicing Elit. Excepturi, Accusantium."
+        "description": "Italian sausage wrapped in a buttery pastry. Two pieces."
     },
 
     { 
@@ -15,7 +15,7 @@ var data = {
         "calories": "500",
         "price": "$8.00",
         "imageref": "images/menu-2.jpg",
-        "description": "Lorem Ipsum Dolor Sit, Amet Consectetur Adipisicing Elit. Excepturi, Accusantium."
+        "description": "Stringy Mozzarrella cheese covered in Japanese Panko breading."
     },
     
     { 
@@ -24,7 +24,7 @@ var data = {
         "calories": "200",
         "price": "$5.00",
         "imageref": "images/menu-3.jpg",
-        "description": "Lorem Ipsum Dolor Sit, Amet Consectetur Adipisicing Elit. Excepturi, Accusantium."
+        "description": "A crispy spring roll with shrimp, carrots, cabbage, bamboo shoot, and bell pepper."
     }, 
 
     { 
@@ -33,7 +33,7 @@ var data = {
         "calories": "500",
         "price": "$20.00",
         "imageref": "images/menu-4.jpg",
-        "description": "Lorem Ipsum Dolor Sit, Amet Consectetur Adipisicing Elit. Excepturi, Accusantium."
+        "description": "Thin crust pizza with tomato sauce, Mozzarrella and Swiss cheese, topped with pepperoni."
     },
 
     { 
@@ -42,7 +42,7 @@ var data = {
         "calories": "500",
         "price": "$15.00",
         "imageref": "images/menu-5.jpg",
-        "description": "Lorem Ipsum Dolor Sit, Amet Consectetur Adipisicing Elit. Excepturi, Accusantium."
+        "description": "Angus beef patty, Cheddar cheese, lettuce, onions, tomatoes, pickles, topped with ketchup and mayo on a toasted bun."
     },
 
     { 
@@ -51,7 +51,7 @@ var data = {
         "calories": "200",
         "price": "$12.00",
         "imageref": "images/menu-6.jpg",
-        "description": "Lorem Ipsum Dolor Sit, Amet Consectetur Adipisicing Elit. Excepturi, Accusantium."
+        "description": "Fresh cut fries made from PEI potatoes, topped with gravy and cheese curds."
     },
 
     { 
@@ -60,7 +60,7 @@ var data = {
         "calories": "500",
         "price": "$8.00",
         "imageref": "images/menu-7.jpg",
-        "description": "Lorem Ipsum Dolor Sit, Amet Consectetur Adipisicing Elit. Excepturi, Accusantium."
+        "description": "Delicious cake with a variety of dried fruits and nuts."
     },
 
     { 
@@ -69,7 +69,7 @@ var data = {
         "calories": "250",
         "price": "$5.00",
         "imageref": "images/menu-8.jpg",
-        "description": "Lorem Ipsum Dolor Sit, Amet Consectetur Adipisicing Elit. Excepturi, Accusantium."
+        "description": "Freshly baked cupcakes topped with our specialty icing. Two pieces."
     },
 
     { 
@@ -78,7 +78,7 @@ var data = {
         "calories": "500",
         "price": "$7.00",
         "imageref": "images/menu-9.jpg",
-        "description": "Lorem Ipsum Dolor Sit, Amet Consectetur Adipisicing Elit. Excepturi, Accusantium."
+        "description": "Tasty Acai bowl with granola, seeds, nuts, and fruits."
     },
 
     { 
@@ -87,7 +87,7 @@ var data = {
         "calories": "300",
         "price": "$4.00",
         "imageref": "images/menu-10.jpg",
-        "description": "Lorem Ipsum Dolor Sit, Amet Consectetur Adipisicing Elit. Excepturi, Accusantium."
+        "description": "Freshly squeezed lemonade."
     },
 
     { 
@@ -96,7 +96,7 @@ var data = {
         "calories": "200",
         "price": "$3.00",
         "imageref": "images/menu-11.jpg",
-        "description": "Lorem Ipsum Dolor Sit, Amet Consectetur Adipisicing Elit. Excepturi, Accusantium."
+        "description": "Freshly squeezed orange juice."
     },
 
     { 
@@ -105,7 +105,7 @@ var data = {
         "calories": "500",
         "price": "$3.00",
         "imageref": "images/menu-12.jpg",
-        "description": "Lorem Ipsum Dolor Sit, Amet Consectetur Adipisicing Elit. Excepturi, Accusantium."
+        "description": "Refreshing homemade fruit punch with lemonade, cranberry juice, and orange juice."
     }
 
 ]

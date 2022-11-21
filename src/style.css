@@ -215,25 +215,24 @@ header .icons #menu-bars{
 
 .form-popup {
     border-radius: .5rem;
-    border:.1rem solid rgba(0,0,0,.2);
     box-shadow: var(--box-shadow);
     display: none;
     position: fixed;
     bottom: 0;
-    right: 15px;
+    right: 1rem;
     z-index: 9;
 }
 
 .form-container {
-    max-width: 1500px;
-    padding: 10px;
+    max-width: 60rem;
+    padding: 1rem;
     background-color: white;
 }
 
 .form-container input[type=text], .form-container input[type=password] {
     width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
+    padding: 1rem;
+    margin: 1rem 0 1rem 0;
     border: none;
     background: #f1f1f1;
 }
@@ -244,11 +243,11 @@ header .icons #menu-bars{
 }
 
 .form-container .btn {
-    padding: 16px 20px;
+    padding: 1rem 1rem;
     border: none;
     cursor: pointer;
     width: 100%;
-    margin-bottom:10px;
+    margin-bottom:1rem;
 }
 
 .form-container .cancel {
@@ -262,8 +261,8 @@ header .icons #menu-bars{
 .shopping-cart{
     display: none;
     position: fixed;
-    top: 80px;
-    right: 15px;
+    top: 8rem;
+    right: 1.5rem;
     z-index: 10;
     padding: 1rem;
     border-radius: .5rem;
@@ -273,11 +272,12 @@ header .icons #menu-bars{
 }
 
 .shopping-cart .btn {
-    padding: 16px 20px;
+    padding: 1rem 1rem;
     border: none;
     cursor: pointer;
     width: 100%;
-    margin-bottom:10px;
+    margin-bottom:1rem;
+    text-align: center;
 }
 
 .shopping-cart .cart-item{

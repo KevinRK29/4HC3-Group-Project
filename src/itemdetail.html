@@ -64,10 +64,12 @@
             <textarea id="special-instructions" name="special-instructions" rows="4" cols="50" style="resize: none;"></textarea>
             <br>
             <label for="qty">Qty:</label>
-            <input type="number" id="qty" name="qty" min="0" step="1" value="1" onkeydown="return false;" style="width: 8vh">
+            <input type="number" id="qty" name="qty" step="1" value="1" onkeydown="return false;" style="width: 8vh">
           </form>
-          <button id="add" onClick="addToCart(document.getElementById('name').innerHTML,1)">Add to cart
+          <button id="add"
+            onClick="editCart(document.getElementById('name').innerHTML, document.getElementById('qty').value)">
             <script src="app.js"></script>
+            Add to cart
           </button>
         </div>
     </div>

@@ -44,12 +44,13 @@ function toggleCart() {
   main.style.display === "block" ? main.style.display = "none" : main.style.display = "block";
 }
 
-function addToCart(item, quantity) {
+function editCart(item, quantity) {
   if (sessionStorage.hasOwnProperty(item)) {
-    sessionStorage[item] = parseFloat(sessionStorage[item]) + parseFloat(quantity);
+    if (parseFloat(sessionStorage[item]) + parseFloat(quantity) < 1) sessionStorage.removeItem(item);
+    else sessionStorage[item] = parseFloat(sessionStorage[item]) + parseFloat(quantity);
   }
   else {
-    sessionStorage[item] = parseFloat(quantity);
+    if (quantity > 0) sessionStorage[item] = parseFloat(quantity);
   }
   console.log(sessionStorage)
 }

@@ -46,11 +46,54 @@ function toggleCart() {
 
 function editCart(item, quantity) {
   if (sessionStorage.hasOwnProperty(item)) {
-    if (parseFloat(sessionStorage[item]) + parseFloat(quantity) < 1) sessionStorage.removeItem(item);
-    else sessionStorage[item] = parseFloat(sessionStorage[item]) + parseFloat(quantity);
+    if (parseFloat(sessionStorage[item]) + parseFloat(quantity) < 1) {
+      sessionStorage.removeItem(item);
+      removeCartItem(item);
+    }
+    else {
+      sessionStorage[item] = parseFloat(sessionStorage[item]) + parseFloat(quantity);
+      updateCartItem(item, quantity);
+    }
   }
   else {
-    if (quantity > 0) sessionStorage[item] = parseFloat(quantity);
+    if (quantity > 0) {
+      sessionStorage[item] = parseFloat(quantity);
+      addCartItem(item, quantity);
+    }
   }
+}
+
+function addCartItem(item, quantity) {
+  const cartRow = document.createElement('div');
+      cartRow.innerHTML = 
+      `<div class="cart-item" id = "` + item + `">
+        <i class="fas fa-plus" onClick="editCart('` + item + `', 1)"></i>
+        <i class="fas fa-minus" onClick="editCart('` + item + `', -1)"></i>
+        <i class="fas fa-trash" onClick="removeCartItem('` + item + `')"></i>
+        <img src="images/menu-4.jpg" alt="" />
+        <div class="cart-content">
+          <h3>` + item + `</h3>
+          <span class="price">$4.99</span>
+          <span class="quantity" id="` + item + `-amount">qty: ` + quantity + `</span>
+        </div>
+      </div>`
+      document.getElementById("myCart").prepend(cartRow);
+}
+
+function removeCartItem(item) {
+  var itemToRemove = document.getElementById(item);
+  itemToRemove.parentNode.removeChild(itemToRemove);
+  sessionStorage.removeItem(item);
+}
+
+function updateCartItem(item) {
+  document.getElementById(item + '-amount').innerHTML =
+    `<span class="quantity" id="qty">qty: ` + sessionStorage[item] + `</span>`
+}
+
+function populateCart() {
   console.log(sessionStorage)
+  for (var i = 0; i < sessionStorage.length; i++) {
+    addCartItem(sessionStorage.key(i), sessionStorage[sessionStorage.key(i)])
+  }
 }

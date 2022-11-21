@@ -225,6 +225,33 @@ header .icons #menu-bars{
     color:var(--orange);
 }
 
+.shopping-cart .cart-item .fa-plus{
+    font-size: 2rem;
+    position: absolute;
+    top: 50%; right: 10rem;
+    cursor: pointer;
+    color:var(--light-color);
+    transform: translateY(-50%);
+}
+
+.shopping-cart .cart-item .fa-plus:hover{
+    color:var(--orange);
+}
+
+.shopping-cart .cart-item .fa-minus{
+    font-size: 2rem;
+    position: absolute;
+    top: 50%; right: 6rem;
+    cursor: pointer;
+    color:var(--light-color);
+    transform: translateY(-50%);
+}
+
+.shopping-cart .cart-item .fa-minus:hover{
+    color:var(--orange);
+}
+
+
 .shopping-cart .cart-item .content h3{
     color: var(--black);
     font-size: 1.7rem;

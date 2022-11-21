@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4HC3 Restaurant App</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="cartstyle.css" />
+  </head>
+
+  <header>
+    <a href="./index.html#" class="logo"><i class="fas fa-utensils"></i>4HC3</a>
+
+    <nav class="navbar">
+      <a class="active" href="#appetizers">appetizers</a>
+      <a href="#mains">mains</a>
+      <a href="#deserts">deserts</a>
+      <a href="#drinks">drinks</a>
+    </nav>
+
+    <div class="icons">
+      <i class="fas fa-bars" id="menu-bars"></i>
+
+      <a href="#" class="fas fa-user" onClick="toggleLogin()"></a>
+      <a href="#" class="fas fa-shopping-cart" onClick="toggleCart()"></a>
+    </div>
+  </header>
+
+  <body>
+    <main class="container">
+      <h1 class="heading">
+        <i class="fas fa-shopping-cart" id="cart"></i> Item Cart
+      </h1>
+
+      <div class="item-flex">
+        <section class="checkout">
+          <h2 class="section-heading">Payment Details</h2>
+          <div class="payment-form">
+            <div class="payment-method">
+              <button
+                class="method card"
+                id="credit-button"
+                onClick="toggleCredit()"
+              >
+                <i class="fas fa-credit-card"></i>
+                <span>Credit Card</span>
+                <!-- <i class="fas fa-square-check"></i> -->
+              </button>
+              <button
+                class="method cash"
+                id="cash-button"
+                onClick="toggleCash()"
+              >
+                <i class="fas fa-money-bill"></i>
+                <span>Cash</span>
+                <!-- <i class="fas fa-square-check"></i> -->
+              </button>
+            </div>
+            <div class="credit-input" id="credit-form">
+              <form action="#">
+                <div class="cardholder-name">
+                  <label for="cardholder-name" class="label-default"
+                    >Cardholder name</label
+                  >
+                  <input
+                    type="text"
+                    name="cardholder-name"
+                    id="cardholder-name"
+                    class="input-default"
+                  />
+                </div>
+                <div class="cardholder-number">
+                  <label for="card-number" class="label-default"
+                    >Card number</label
+                  >
+                  <input
+                    type="text"
+                    name="card-number"
+                    id="card-number"
+                    class="input-default"
+                  />
+                </div>
+
+                <div class="input-flex">
+                  <div class="expiry-date">
+                    <label for="expiry-date" class="label-default"
+                      >Expiration Date (MM/DD)</label
+                    >
+                    <div class="input-flex">
+                      <input
+                        type="number"
+                        name="month"
+                        id="expiry-date"
+                        placeholder="12"
+                        min="1"
+                        max="12"
+                        class="input-default"
+                      />
+                      /
+                      <input
+                        type="number"
+                        name="day"
+                        id="expiry-date"
+                        placeholder="31"
+                        min="1"
+                        max="31"
+                        class="input-default"
+                      />
+                    </div>
+                  </div>
+                  <div class="cvv">
+                    <label for="cvv" class="label-default">CVV</label>
+                    <input
+                      type="text"
+                      name="cvv"
+                      id="cvv"
+                      class="input-default"
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <button class="btn btn-primary">
+            <b>Pay</b> $ <span id="payAmount">2.15</span>
+          </button>
+        </section>
+        <section class="cart">
+          <div class="cart-item">
+            <h2 class="section-heading" id="summary">Order Summary</h2>
+            <script src="app.js"></script>
+            <script src="data.js"></script>
+            <script>populateSummary()</script>
+          </div>
+
+          <div class="wrapper">
+            <div class="amount">
+              <div class="subtotal">
+                <span>Subtotal</span>
+                <span>$<span id="subtotal">2.05</span></span>
+              </div>
+              <div class="tax">
+                <span>Tax</span> <span>$<span id="subtotal">2.05</span></span>
+              </div>
+              <div class="total">
+                <span>Total</span> <span>$<span id="subtotal">2.05</span></span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- cart popup -->
+    <div class="shopping-cart" id="myCart">
+      <script src="app.js"></script>
+      <script src="data.js"></script>
+      <script>populateCart()</script>
+      <script>totalCalc()</script>
+      <a href="#" class="btn">Checkout</a>
+    </div>
+
+    <!-- login popup -->
+    <div class="form-popup" id="myForm">
+      <form class="form-container">
+        <h1>Login</h1>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required />
+
+        <label for="psw"><b>Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          required
+        />
+
+        <button type="submit" class="btn">Login</button>
+        <button type="button" class="btn cancel" onclick="toggleLogin()">
+          Close
+        </button>
+      </form>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

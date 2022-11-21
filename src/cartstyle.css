@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+    --green:#c00000;
+    --black:#000000;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --onyx: hsl(0, 0%, 25%);
+    --platinum: hsl(0, 0%, 90%);
+    --dim-gray: hsl(0,0%,40%);
+    --davys-gray: hsl(0,0%,30%);
+    --spanish-gray: hsl(0,0%,62%);
+    --quick-silver: hsl(0,0%, 64%);
+
+    --fs-28: 28px;
+    --fs-24: 24px;
+    --fs-18: 18px;
+    --fs-15: 15px;
+    --fs-14: 14px;
+
+    --fw-5: 500;
+    --fw-6: 600;
+    --fw-7: 700;
+
+    --px: 60px;
+    --radius: 5px;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+    /*font-size: 62.5%;*/
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+i, span {
+    display: inline-block
+}
+
+label, img {
+    display: block;
+}
+
+input {
+    font: inherit;
+    width: 100%;
+    border: none;
+}
+
+input:focus {
+    outline: 2px solid var(--orange);
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+button {
+    border: none;
+    background: none;
+    font: inherit;
+    cursor: pointer;
+}
+header{
+    /*position: fixed;*/
+    top:0; left: 0; right:0;
+    background: #fff;
+    padding:1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+
+header .logo{
+    color:var(--black);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+header .logo i{
+    color:var(--green);
+}
+
+header .navbar a{
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding:.5rem 1.5rem;
+    color:var(--light-color);
+}
+
+header .navbar a.active,
+header .navbar a:hover{
+    color:#fff;
+    background: var(--green);
+}
+
+header .icons i,
+header .icons a{
+    cursor: pointer;
+    margin-left: .5rem;
+    height:4.5rem;
+    line-height: 4.5rem;
+    width:4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color:var(--black);
+    border-radius: 50%;
+    background: #eee;
+}
+
+header .icons i:hover,
+header .icons a:hover{
+    color:#fff;
+    background: var(--green);
+    transform: rotate(360deg);
+}
+
+header .icons #menu-bars{
+    display: none;
+}
+
+/* Cart Stuff */
+.container {
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    font-size: var(--fs-28);
+    font-weight: var(--fw-6);
+    color: var(--onyx);
+    border-bottom: 1px solid var(--gainsboro);
+    padding: 20px var(--px);
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+
+.heading i{
+    font-size:40px;
+}
+
+.item-flex {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.checkout {
+    width: 70%;
+    padding: 40px var(--px);
+    background: white;
+    border-right: 1px solid gainsboro;
+}
+
+.section-heading {
+    color: var(--onyx);
+    margin-bottom: 30px;
+    font-size: var(--fs-24);
+    font-weight: var(--fw-5);
+}
+
+.payment-form {
+    margin-bottom: 40px;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.payment-method .method {
+    border: 1px solid var(--quick-silver);
+    border-radius: 5px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.payment-method .card {
+    border: 3px solid #c00000;
+}
+
+.payment-method .method i{
+    font-size: 20px;
+}
+
+.credit-input {
+    display: block;
+}
+
+.label-default{
+    padding-left: 10px;
+    margin-bottom: 5px;
+    font-size: var(--fs-14);
+    color: var(--spanish-gray);
+}
+
+.input-default {
+    background: var(--platinum);
+    border-radius: var(--radius);
+    color: var(--davys-gray);
+}
+
+.payment-form input {
+    padding: 10px 15px;
+    font-size: var(--fs-18);
+    font-weight: var(--fw-5);
+}
+
+.cardholder-name,
+.cardholder-number {
+    margin-bottom: 20px;
+}
+
+.cardholder-number input,
+.cvv input {
+    letter-spacing: 2px;
+}
+
+.input-flex {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.input-flex .expiry-date,
+.input-flux .cvv {
+    width: 50%;
+}
+
+.expiry-date .input-flex {
+    color: var(--spanish-gray);
+    gap: 13px;
+}
+
+.expiry-date .input-flex input {
+    text-align: center;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color:#fff;
+    background: var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding:.8rem 3rem;
+}
+
+.btn:hover{
+    background: var(--green);
+    letter-spacing: .1rem;
+}
+/* .btn{
+    border-radius: var(--radius);
+} */
+
+.btn:active{
+    transform: scale(0.99);
+}
+
+/* CART STUFF */
+.cart {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.cart-item {
+    padding: 40px var(--px);
+    margin-bottom: auto;
+}
+
+.product-card:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.product-card .card {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+}
+
+.card .product-img {
+    border-radius: var(--radius);
+    height: 10rem;
+}
+
+.card .detail .product-name {
+    font-weight: var(--fw-6);
+    font-size: var(--fs-15);
+    color: var(--dim-gray);
+    margin-bottom: 10px;
+}
+
+.card .detail .wrapper {
+    display:flex;
+    gap: 20px;
+}
+
+.product-qty {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-qty button {
+    background: var(--platinum);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-qty button:active,
+.product-x-btn:active i{
+    transform: scale(0.95); 
+}
+
+.product-qty button i {
+    font-size: 10px;
+}
+
+.product-x-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.product-x-btn i{
+    font-size: 25px;
+    color:var(--quick-silver);
+}
+
+.product-x-btn:hover i {
+    color:var(--orange); 
+}
+
+.amount {
+    padding: 40px var(--px);
+}
+
+.amount > div {
+    display: flex;
+    justify-content:  space-between;
+}
+
+.amount > div:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.amount .total {
+    font-size: var(--fs-18);
+    font-weight: var(--fw-7);
+    color: var(--onyx);
+}
+
+.form-popup {
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 1rem;
+    z-index: 9;
+}
+
+.form-container {
+    max-width: 60rem;
+    padding: 1rem;
+    background-color: white;
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0 1rem 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.form-container .btn {
+    padding: 1rem 1rem;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:1rem;
+}
+
+.form-container .cancel {
+    background-color: var(--green);
+}
+
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+
+.shopping-cart{
+    overflow-y:auto;
+    max-height:30rem;
+    display: none;
+    position: fixed;
+    top: 8rem;
+    right: 1.5rem;
+    z-index: 10;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width:50rem;
+    background: #fff;
+}
+
+.shopping-cart .btn {
+    padding: 1rem 1rem;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:1rem;
+    text-align: center;
+}
+
+.shopping-cart .cart-item{
+    display: flex;
+    align-items:center;
+    gap: 1rem;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.shopping-cart .cart-item img{
+    height: 10rem;
+
+}
+
+.shopping-cart .cart-item .fa-trash{
+    font-size: 2rem;
+    position: absolute;
+    top: 50%; right: 2rem;
+    cursor: pointer;
+    color:var(--light-color);
+    transform: translateY(-50%);
+}
+
+.shopping-cart .cart-item .fa-trash:hover{
+    color:var(--orange);
+}
+
+.shopping-cart .cart-item .fa-plus{
+    font-size: 2rem;
+    position: absolute;
+    top: 50%; right: 10rem;
+    cursor: pointer;
+    color:var(--light-color);
+    transform: translateY(-50%);
+}
+
+.shopping-cart .cart-item .fa-plus:hover{
+    color:var(--orange);
+}
+
+.shopping-cart .cart-item .fa-minus{
+    font-size: 2rem;
+    position: absolute;
+    top: 50%; right: 6rem;
+    cursor: pointer;
+    color:var(--light-color);
+    transform: translateY(-50%);
+}
+
+.shopping-cart .cart-item .fa-minus:hover{
+    color:var(--orange);
+}
+
+.shopping-cart .cart-item .content h3{
+    color: var(--black);
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+}
+
+.shopping-cart .cart-item .content span{
+    color: var(--light-color);
+    font-size: 1.6rem;
+}
+
+.shopping-cart .cart-item .content .quantity{
+    padding-left: 1rem;
+}
+
+.shopping-cart .total{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--black);
+}
+
+@media (max-width: 1200px) {
+    .item-flex {
+        flex-direction: column-reverse;
+    }
+
+    .checkout {
+        width: 100%;
+        border-right: none;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+
+    .cart {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        border-bottom: 1px solid var(--gainsboro);
+    }
+
+    .cart .wrapper {
+        margin-top: auto;
+    }
+
+    .cart .cart-item {
+        border-right: 1px solid var(gainsboro);
+    }
+}
+
+@media (max-width: 168px) {
+    :root {
+        --px: 40px;
+    }
+
+    .cart {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 567px) {
+    :root {
+        --px: 20px;
+    }
+
+    .payment-method,
+    .input-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .payment-method .method {
+        width: 100%;
+    }
+
+    .input-flex .expiry-date,
+    .input-flex .cvv {
+        width: 100%;
+    }
+
+    .expiry-date .input-flex {
+        flex-direction: row;
+    }
+}

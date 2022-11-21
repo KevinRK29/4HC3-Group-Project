@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+    --green:#c00000;
+    --black:#000000;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    overflow-x: hidden;
+    /*font-size: 62.5%;*/
+}
+
+header{
+    /*position: fixed;*/
+    top:0; left: 0; right:0;
+    background: #fff;
+    padding:1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+
+header .logo{
+    color:var(--black);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+header .logo i{
+    color:var(--green);
+}
+
+header .navbar a{
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding:.5rem 1.5rem;
+    color:var(--light-color);
+}
+
+header .navbar a.active,
+header .navbar a:hover{
+    color:#fff;
+    background: var(--green);
+}
+
+header .icons i,
+header .icons a{
+    cursor: pointer;
+    margin-left: .5rem;
+    height:4.5rem;
+    line-height: 4.5rem;
+    width:4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color:var(--black);
+    border-radius: 50%;
+    background: #eee;
+}
+
+header .icons i:hover,
+header .icons a:hover{
+    color:#fff;
+    background: var(--green);
+    transform: rotate(360deg);
+}
+
+header .icons #menu-bars{
+    display: none;
+}
+
+.container {
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    font-size: 3rem;
+    font-weight: bolder;
+    color: black;
+    border-bottom: 1px solid;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+
+.heading i{
+    font-size:40px;
+}
+
+.item-flex {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.checkout {
+    width: 70%;
+    padding: 2rem;
+    background: white;
+    border-right: 1px solid gainsboro;
+}
+
+.section-heading {
+    color: grey;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.payment-form {
+    margin-bottom: 40px;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.payment-method .method {
+    border: 1px solid silver;
+    border-radius: 5px;
+    width: 50%;
+    display:flex;
+    align-items: center;
+    padding: 15px 30px;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.payment-method .card {
+    border-color: lightblue;
+}
+
+.payment-method .method i{
+    font-size: 20px;
+}
+
+.label-default{
+    padding-left: 10px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: gray;
+}
+
+.input-default {
+    border-radius: 2px;
+    color: gray;
+}
+
+.payment-form input {
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.cardholder-name,
+.cardholder-number {
+    margin-bottom: 20px;
+}
+
+.cardholder-number input,
+.cvv input {
+    letter-spacing: 2px;
+}
+
+.input-flex {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.input-flex .expiry-date,
+.input-flux .cvv {
+    width: 50%;
+}
+
+.expiry-date .input-flex {
+    color: gray;
+    gap: 13px;
+}
+
+.expiry-date .input-flex input {
+    text-align: center;
+}
+
+.btn{
+    border-radius: 2px;
+}
+
+.btn:active{
+    transform: scale(0.99);
+}
+
+.btn:focus {
+    color: white;
+    background: lightblue;
+    outline: 2px solid lightblue;
+    outline-offset: 2px;
+}
+
+.btn-primary {
+    background: lightblue;
+    font-weight: bolder;
+    color: white;
+    padding: 13px 45px;
+}
+
+.cart {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.cart-item {
+    padding: 40px;
+    margin-bottom: auto;
+}
+
+.product-card:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.product-card .card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card .product-img {
+    border-radius: 2px;
+    height: 10rem;
+}
+
+.card .detail .product-name {
+    font-weight: bolder;
+    font-size: 15px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.card .detail .wrapper {
+    display:flex;
+    gap: 20px;
+}
+
+.product-qty {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-qty button {
+    background: white;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-qty button:active,
+.product-x-btn:active {
+    transform: scale(0.95); 
+}
+
+.product-qty button i {
+    font-size: 10px;
+}
+
+.product-x-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.product-x-btn i{
+    font-size: 25px;
+    color:var(--light-color);
+}
+
+.product-x-btn:hover i {
+    color:var(--orange);
+}
+
+.amount > div {
+    display: flex;
+    justify-content:  space-between;
+}
+
+.amount > div:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.amount .total {
+    font-size: 18px;
+    font-weight: bolder;
+    color: var(--light-color);
+}

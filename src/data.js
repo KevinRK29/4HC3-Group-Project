@@ -11,7 +11,7 @@ var data = {
 
     { 
         "id": 2,
-        "name": "Mozzarrella Cheese Sticks",
+        "name": "Mozzarella Cheese Sticks",
         "calories": "500",
         "price": "$8.00",
         "imageref": "images/menu-2.jpg",

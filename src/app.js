@@ -150,16 +150,32 @@ for (let i = 0; i < incrementBtn.length; i++) {
   })
 }
 
-function incrementValue() {
+function incrementValue(item) {
   console.log("Increment");
+  // item = "Spring Rolls";
+  for (var i = 0; i < sessionStorage.length; i++) {
+    if (sessionStorage.key(i) == item) {
+      console.log("Found item");
+      sessionStorage[sessionStorage.key(i)]++;
+    }
+  }
   // let increment = Number(this.previousElementSibling.textContent);
   // increment++;
   // this.previousElementSibling.textContent = increment;
   totalCalc();
 }
 
-function decrementValue() {
+function decrementValue(item) {
   console.log("Decrement");
+  // item = "Spring Rolls";
+  for (var i = 0; i < sessionStorage.length; i++) {
+    if (sessionStorage.key(i) == item) {
+      console.log("Found item");
+      sessionStorage[sessionStorage.key(i)]--;
+    }
+  }
+  // quantity--;
+  // sessionStorage[sessionStorage.key(item)] = quantity;
   // let decrement = Number(this.previousElementSibling.textContent);
   // decrement <= 1 ? 1 : decrement--;
   // this.previousElementSibling.textContent = decrement;

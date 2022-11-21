@@ -210,11 +210,15 @@ header .icons #menu-bars{
 }
 
 .payment-method .card {
-    border: 3px solid var(--green);
+    border: 3px solid red;
 }
 
 .payment-method .method i{
     font-size: 20px;
+}
+
+.credit-input {
+    display: block;
 }
 
 .label-default{
@@ -309,8 +313,9 @@ header .icons #menu-bars{
 .product-card .card {
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
+
 }
 
 .card .product-img {
@@ -501,4 +506,69 @@ header .icons #menu-bars{
     padding: 1rem 0;
     text-align: center;
     color: var(--black);
+}
+
+@media (max-width: 1200px) {
+    .item-flex {
+        flex-direction: column-reverse;
+    }
+
+    .checkout {
+        width: 100%;
+        border-right: none;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+
+    .cart {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        border-bottom: 1px solid var(--gainsboro);
+    }
+
+    .cart .wrapper {
+        margin-top: auto;
+    }
+
+    .cart .cart-item {
+        border-right: 1px solid var(gainsboro);
+    }
+}
+
+@media (max-width: 168px) {
+    :root {
+        --px: 40px;
+    }
+
+    .cart {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 567px) {
+    :root {
+        --px: 20px;
+    }
+
+    .payment-method,
+    .input-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .payment-method .method {
+        width: 100%;
+    }
+
+    .input-flex .expiry-date,
+    .input-flex .cvv {
+        width: 100%;
+    }
+
+    .expiry-date .input-flex {
+        flex-direction: row;
+    }
 }

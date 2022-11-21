@@ -32,41 +32,9 @@
 
     <div class="icons">
         <i class="fas fa-bars" id="menu-bars"></i>
-        <i class="fas fa-shopping-cart" id="cart"></i>
-        <div class="shopping-cart">
-            <div class="cart-item">
-                <i class="fas fa-trash"></i>
-                <img src="images/menu-4.jpg" alt="">
-                <div class="cart-content">
-                    <h3>item</h3>
-                    <span class="price">$4.99</span>
-                    <span class="quantity">qty: 1</span>
-                </div>
-            </div>
-            <div class="cart-item">
-                <i class="fas fa-trash"></i>
-                <img src="images/menu-3.jpg" alt="">
-                <div class="cart-content">
-                    <h3>item</h3>
-                    <span class="price">$4.99</span>
-                    <span class="quantity">qty: 1</span>
-                </div>
-            </div>
-            <div class="cart-item">
-                <i class="fas fa-trash"></i>
-                <img src="images/menu-2.jpg" alt="">
-                <div class="cart-content">
-                    <h3>item</h3>
-                    <span class="price">$4.99</span>
-                    <span class="quantity">qty: 1</span>
-                </div>
-            </div>
-            <div class="total">total : 19.69</div>
-            <a href="#" class="btn">Checkout</a>
-        </div>
         
-        <button class="login-button" onclick="toggleLogin()"><i class="fas fa-user"></i></button>
-        <a href="#" class="fas fa-shopping-cart"></a>
+        <a href="#" class="fas fa-user" onClick="toggleLogin()"></a>
+        <a href="#" class="fas fa-shopping-cart" onClick="toggleCart()"></a>
     </div>
 
 </header>
@@ -347,6 +315,37 @@
 <!-- drinks section ends -->
 
 <!-- cart popup -->
+<div class="shopping-cart" id="myCart">
+    <div class="cart-item">
+        <i class="fas fa-trash"></i>
+        <img src="images/menu-4.jpg" alt="">
+        <div class="cart-content">
+            <h3>item</h3>
+            <span class="price">$4.99</span>
+            <span class="quantity">qty: 1</span>
+        </div>
+    </div>
+    <div class="cart-item">
+        <i class="fas fa-trash"></i>
+        <img src="images/menu-3.jpg" alt="">
+        <div class="cart-content">
+            <h3>item</h3>
+            <span class="price">$4.99</span>
+            <span class="quantity">qty: 1</span>
+        </div>
+    </div>
+    <div class="cart-item">
+        <i class="fas fa-trash"></i>
+        <img src="images/menu-2.jpg" alt="">
+        <div class="cart-content">
+            <h3>item</h3>
+            <span class="price">$4.99</span>
+            <span class="quantity">qty: 1</span>
+        </div>
+    </div>
+    <div class="total">total : 19.69</div>
+    <a href="#" class="btn">Checkout</a>
+</div>
 
 <!-- login popup -->
 <div class="form-popup" id="myForm">

@@ -38,3 +38,8 @@ function toggleLogin() {
   main = document.getElementById("myForm")
   main.style.display === "block" ? main.style.display = "none" : main.style.display = "block";
 }
+
+function toggleCart() {
+  main = document.getElementById("myCart")
+  main.style.display === "block" ? main.style.display = "none" : main.style.display = "block";
+}

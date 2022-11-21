@@ -125,64 +125,6 @@ header .icons #menu-bars{
     display: none;
 }
 
-header .shopping-cart{
-    position: absolute;
-    top: 110%;
-    right: 2rem;
-    padding: 1rem;
-    border-radius: .5rem;
-    box-shadow: var(--box-shadow);
-    width:30rem;
-    background: #fff;
-}
-
-header .shopping-cart .cart-item{
-    display: flex;
-    align-items:center;
-    gap: 1rem;
-    position: relative;
-    margin: 1rem 0;
-}
-
-header .shopping-cart .cart-item img{
-    height: 10rem;
-
-}
-
-header .shopping-cart .cart-item .fa-trash{
-    font-size: 2rem;
-    position: absolute;
-    top: 50%; right: 2rem;
-    cursor: pointer;
-    color:var(--light-color);
-    transform: translateY(-50%);
-}
-
-header .shopping-cart .cart-item .fa-trash:hover{
-    color:var(--orange);
-}
-
-header .shopping-cart .cart-item .content h3{
-    color: var(--black);
-    font-size: 1.7rem;
-    padding-bottom: 1rem;
-}
-
-header .shopping-cart .cart-item .content span{
-    color: var(--light-color);
-    font-size: 1.6rem;
-}
-
-header .shopping-cart .cart-item .content .quantity{
-    padding-left: 1rem;
-}
-
-header .shopping-cart .total{
-    font-size: 2.5rem;
-    padding: 1rem 0;
-    text-align: center;
-    color: var(--black);
-}
 .menu .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -265,32 +207,29 @@ header .shopping-cart .total{
     opacity:0;
 }
 
-/* Button used to open the contact form - fixed at the bottom of the page */
 .login-button {
     border: none;
     cursor: pointer;
     border-radius: 50%;
 }
 
-/* The popup form - hidden by default */
 .form-popup {
     border-radius: .5rem;
     border:.1rem solid rgba(0,0,0,.2);
+    box-shadow: var(--box-shadow);
     display: none;
     position: fixed;
     bottom: 0;
     right: 15px;
     z-index: 9;
-    }
+}
 
-/* Add styles to the form container */
 .form-container {
     max-width: 1500px;
     padding: 10px;
     background-color: white;
 }
 
-/* Full-width input fields */
 .form-container input[type=text], .form-container input[type=password] {
     width: 100%;
     padding: 15px;
@@ -299,32 +238,95 @@ header .shopping-cart .total{
     background: #f1f1f1;
 }
 
-/* When the inputs get focus, do something */
 .form-container input[type=text]:focus, .form-container input[type=password]:focus {
     background-color: #ddd;
     outline: none;
 }
 
-/* Set a style for the submit/login button */
 .form-container .btn {
     padding: 16px 20px;
     border: none;
     cursor: pointer;
     width: 100%;
     margin-bottom:10px;
-    opacity: 0.8;
 }
 
-/* Add a red background color to the cancel button */
 .form-container .cancel {
     background-color: var(--green);
 }
 
-/* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
     opacity: 1;
 }
 
+.shopping-cart{
+    display: none;
+    position: fixed;
+    top: 80px;
+    right: 15px;
+    z-index: 10;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width:30rem;
+    background: #fff;
+}
+
+.shopping-cart .btn {
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+}
+
+.shopping-cart .cart-item{
+    display: flex;
+    align-items:center;
+    gap: 1rem;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.shopping-cart .cart-item img{
+    height: 10rem;
+
+}
+
+.shopping-cart .cart-item .fa-trash{
+    font-size: 2rem;
+    position: absolute;
+    top: 50%; right: 2rem;
+    cursor: pointer;
+    color:var(--light-color);
+    transform: translateY(-50%);
+}
+
+.shopping-cart .cart-item .fa-trash:hover{
+    color:var(--orange);
+}
+
+.shopping-cart .cart-item .content h3{
+    color: var(--black);
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+}
+
+.shopping-cart .cart-item .content span{
+    color: var(--light-color);
+    font-size: 1.6rem;
+}
+
+.shopping-cart .cart-item .content .quantity{
+    padding-left: 1rem;
+}
+
+.shopping-cart .total{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--black);
+}
 
 /* media queries  */
 

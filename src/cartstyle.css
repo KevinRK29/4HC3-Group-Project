@@ -379,3 +379,118 @@ header .icons #menu-bars{
     font-weight: bolder;
     color: var(--light-color);
 }
+
+.form-popup {
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 1rem;
+    z-index: 9;
+}
+
+.form-container {
+    max-width: 60rem;
+    padding: 1rem;
+    background-color: white;
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0 1rem 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.form-container .btn {
+    padding: 1rem 1rem;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:1rem;
+}
+
+.form-container .cancel {
+    background-color: var(--green);
+}
+
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+
+.shopping-cart{
+    display: none;
+    position: fixed;
+    top: 8rem;
+    right: 1.5rem;
+    z-index: 10;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    width:50rem;
+    background: #fff;
+}
+
+.shopping-cart .btn {
+    padding: 1rem 1rem;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:1rem;
+    text-align: center;
+}
+
+.shopping-cart .cart-item{
+    display: flex;
+    align-items:center;
+    gap: 1rem;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.shopping-cart .cart-item img{
+    height: 10rem;
+
+}
+
+.shopping-cart .cart-item .fa-trash{
+    font-size: 2rem;
+    position: absolute;
+    top: 50%; right: 2rem;
+    cursor: pointer;
+    color:var(--light-color);
+    transform: translateY(-50%);
+}
+
+.shopping-cart .cart-item .fa-trash:hover{
+    color:var(--orange);
+}
+
+.shopping-cart .cart-item .content h3{
+    color: var(--black);
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+}
+
+.shopping-cart .cart-item .content span{
+    color: var(--light-color);
+    font-size: 1.6rem;
+}
+
+.shopping-cart .cart-item .content .quantity{
+    padding-left: 1rem;
+}
+
+.shopping-cart .total{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--black);
+}

@@ -44,8 +44,10 @@
         </nav>
         
         <div class="icons">
+            <script src="app.js"></script>
             <i class="fas fa-bars" id="menu-bars"></i>
-            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-user" onClick="toggleLogin()"></a>
+            <a href="#" class="fas fa-shopping-cart" onClick="toggleCart()"></a>
         </div>
         
     </header>
@@ -72,6 +74,55 @@
             Add to cart
           </button>
         </div>
+    </div>
+
+    <!-- cart popup -->
+    <div class="shopping-cart" id="myCart">
+        <div class="cart-item">
+            <i class="fas fa-trash"></i>
+            <img src="images/menu-4.jpg" alt="">
+            <div class="cart-content">
+                <h2>item</h2>
+                <span style="font-size:1.5rem" class="price">$4.99</span>
+                <span style="font-size:1.5rem" class="quantity">qty: 1</span>
+            </div>
+        </div>
+        <div class="cart-item">
+            <i class="fas fa-trash"></i>
+            <img src="images/menu-3.jpg" alt="">
+            <div class="cart-content">
+                <h2>item</h2>
+                <span style="font-size:1.5rem" class="price">$4.99</span>
+                <span style="font-size:1.5rem" class="quantity">qty: 1</span>
+            </div>
+        </div>
+        <div class="cart-item">
+            <i class="fas fa-trash"></i>
+            <img src="images/menu-2.jpg" alt="">
+            <div class="cart-content">
+                <h2>item</h2>
+                <span style="font-size:1.5rem" class="price">$4.99</span>
+                <span style="font-size:1.5rem" class="quantity">qty: 1</span>
+            </div>
+        </div>
+        <div class="total">total : 19.69</div>
+        <a href="#" class="btn">Checkout</a>
+    </div>
+
+    <!-- login popup -->
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+        <h1>Login</h1>
+    
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+    
+        <button type="submit" class="btn">Login</button>
+        <button type="button" class="btn cancel" onclick="toggleLogin()">Close</button>
+        </form>
     </div>
 
     <script>

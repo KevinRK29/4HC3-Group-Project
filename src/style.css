@@ -207,12 +207,6 @@ header .icons #menu-bars{
     opacity:0;
 }
 
-.login-button {
-    border: none;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
 .form-popup {
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
@@ -267,7 +261,7 @@ header .icons #menu-bars{
     padding: 1rem;
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
-    width:30rem;
+    width:50rem;
     background: #fff;
 }
 

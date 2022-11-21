@@ -43,3 +43,13 @@ function toggleCart() {
   main = document.getElementById("myCart")
   main.style.display === "block" ? main.style.display = "none" : main.style.display = "block";
 }
+
+function addToCart(item, quantity) {
+  if (sessionStorage.hasOwnProperty(item)) {
+    sessionStorage[item] = parseFloat(sessionStorage[item]) + parseFloat(quantity);
+  }
+  else {
+    sessionStorage[item] = parseFloat(quantity);
+  }
+  console.log(sessionStorage)
+}

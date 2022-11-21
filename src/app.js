@@ -65,8 +65,8 @@ function editCart(item, quantity) {
 
 function addCartItem(item, quantity) {
   const cartRow = document.createElement('div');
-      cartRow.innerHTML = 
-      `<div class="cart-item" id = "` + item + `">
+  cartRow.innerHTML =
+    `<div class="cart-item" id = "` + item + `">
         <i class="fas fa-plus" onClick="editCart('` + item + `', 1)"></i>
         <i class="fas fa-minus" onClick="editCart('` + item + `', -1)"></i>
         <i class="fas fa-trash" onClick="removeCartItem('` + item + `')"></i>
@@ -77,7 +77,7 @@ function addCartItem(item, quantity) {
           <span class="quantity" id="` + item + `-amount">qty: ` + quantity + `</span>
         </div>
       </div>`
-      document.getElementById("myCart").prepend(cartRow);
+  document.getElementById("myCart").prepend(cartRow);
 }
 
 function removeCartItem(item) {
@@ -98,59 +98,71 @@ function populateCart() {
   }
 }
 
-function togglePayment() {
-  main = document.getElementById("credit-form");
-  creditCardBtn = document.getElementById("credit-button");
-  main.style.display !== "block" ? main.style.display = "block" : main.style.display = "none";
-  creditCardBtn.style.borderColor === "red" ? main.style.borderColor = "black" : main.style.borderColor = "red";
-  // creditCardBtn.style.borderColor = "red";
+var cashSelected = false;
+
+function toggleCash() {
+  cashSelected = true;
+  document.getElementById("credit-form").style.display = "none";
+  document.getElementById("credit-button").style.borderColor = "black";
+  document.getElementById("credit-button").style.borderWidth = "1px";
+  document.getElementById("cash-button").style.borderWidth = "3px";
+  document.getElementById("cash-button").style.borderColor = "#c00000";
 }
-// let payAmountBtn = document.querySelector('#payAmount');
-// let decrementBtn = document.querySelector('#decrement');
-// let quantityElem = document.querySelector('#quantity');
-// let incrementBtn = document.querySelector('#increment');
-// let priceElem = document.querySelector('#price');
-// let subtotalElem = document.querySelector('#subtotal');
-// let taxElem = document.querySelector('#tax');
-// let totalElem = document.querySelector('#total');
 
-// console.log(incrementBtn.length);
+function toggleCredit() {
+  cashSelected = false;
+  document.getElementById("credit-form").style.display = "block";
+  document.getElementById("credit-button").style.borderColor = "#c00000";
+  document.getElementById("cash-button").style.borderWidth = "1px";
+  document.getElementById("credit-button").style.borderWidth = "3px";
+  document.getElementById("cash-button").style.borderColor = "black";
+}
 
-// for (let i = 0; i < incrementBtn.length; i++) {
-//   incrementBtn[i].addEventListener('click', function () {
-//     let increment = Number(this.previousElementSibling.textContent);
-//     increment++;
-//     this.previousElementSibling.textContent = increment;
-//     //totalCalc();
-//     console.log(increment);
-//   })
+let payAmountBtn = document.querySelector('#payAmount');
+let decrementBtn = document.querySelector('#decrement');
+let quantityElem = document.querySelector('#quantity');
+let incrementBtn = document.querySelector('#increment');
+let priceElem = document.querySelector('#price');
+let subtotalElem = document.querySelector('#subtotal');
+let taxElem = document.querySelector('#tax');
+let totalElem = document.querySelector('#total');
 
-//   decrementBtn[i].addEventListener('click', function () {
-//     let decrement = Number(this.previousElementSibling.textContent);
-//     decrement <= 1 ? 1 : decrement--;
-//     this.previousElementSibling.textContent = decrement;
-//     //totalCalc();
-//   })
-// }
+console.log(incrementBtn.length);
+for (let i = 0; i < incrementBtn.length; i++) {
+  incrementBtn[i].addEventListener('click', function () {
+    let increment = Number(this.previousElementSibling.textContent);
+    increment++;
+    this.previousElementSibling.textContent = increment;
+    //totalCalc();
+    console.log(increment);
+  })
 
-// const totalCalc = function () {
-//   const tax = 0.13;
-//   let subtotal = 0;
-//   let totalTax = 0;
-//   let total = 0;
+  decrementBtn[i].addEventListener('click', function () {
+    let decrement = Number(this.previousElementSibling.textContent);
+    decrement <= 1 ? 1 : decrement--;
+    this.previousElementSibling.textContent = decrement;
+    //totalCalc();
+  })
+}
 
-//   for (let i = 0; i < quantityElem.length; i++) {
-//     subtotal += Number(quantityElem[i].textContent) = Number(priceElem[i].textContent);
-//   }
+const totalCalc = function () {
+  const tax = 0.13;
+  let subtotal = 0;
+  let totalTax = 0;
+  let total = 0;
 
-//   subtotalElem.textContent = subtotal.toFixed(2);
+  for (let i = 0; i < quantityElem.length; i++) {
+    subtotal += Number(quantityElem[i].textContent) = Number(priceElem[i].textContent);
+  }
 
-//   totalTax = subtotal * tax;
+  subtotalElem.textContent = subtotal.toFixed(2);
 
-//   taxElem.textContent = totalTax.toFixed(2);
+  totalTax = subtotal * tax;
 
-//   total = subtotal + totalTax;
+  taxElem.textContent = totalTax.toFixed(2);
 
-//   totalElem.textContent = total.toFixed(2);
-//   payAmountBtn.textContent = total.toFixed(2);
-// }
+  total = subtotal + totalTax;
+
+  totalElem.textContent = total.toFixed(2);
+  payAmountBtn.textContent = total.toFixed(2);
+}

@@ -50,7 +50,11 @@
           <h2 class="section-heading">Payment Details</h2>
           <div class="payment-form">
             <div class="payment-method">
-              <button class="method card" id="credit-button">
+              <button
+                class="method card"
+                id="credit-button"
+                onClick="toggleCredit()"
+              >
                 <i class="fas fa-credit-card"></i>
                 <span>Credit Card</span>
                 <!-- <i class="fas fa-square-check"></i> -->
@@ -58,7 +62,7 @@
               <button
                 class="method cash"
                 id="cash-button"
-                onClick="togglePayment()"
+                onClick="toggleCash()"
               >
                 <i class="fas fa-money-bill"></i>
                 <span>Cash</span>

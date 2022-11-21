@@ -210,7 +210,7 @@ header .icons #menu-bars{
 }
 
 .payment-method .card {
-    border: 3px solid red;
+    border: 3px solid #c00000;
 }
 
 .payment-method .method i{

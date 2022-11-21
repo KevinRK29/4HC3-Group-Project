@@ -19,8 +19,17 @@
 <body>
     <script src="data.js"></script>
     <script>
+        var currItem;
+        if(window.location.hash) {
+            currItem = window.location.hash.substring(1); //Puts hash in variable, and removes the # character
+            // hash found
+        } else {
+            // No hash found
+        }
         //get current item id from menu page
-        var currentItemId = 3; //test value
+        var currentItemId = currItem - 1;
+        console.log(currentItemId);
+        console.log(data.items[currentItemId].imageref);
     </script>
 
     <header>
@@ -43,7 +52,7 @@
 
     <div class="card">
         <div class="image-container">
-            <img id="image" src="images/menu-1.jpg" alt="itemname">
+            <img id="image" src="images/menu-4.jpg" alt="itemname">
         </div>
         <div class="description-container">
           <h2 id="name" style="margin-top: 2vh;"><b>placeholder</b></h2>
@@ -66,6 +75,7 @@
         document.getElementById("calsid").innerHTML = data.items[currentItemId].calories;
         document.getElementById("priceid").innerHTML = data.items[currentItemId].price;
         document.getElementById("descid").innerHTML = data.items[currentItemId].description;
+        document.getElementById("image").src = data.items[currentItemId].imageref;
         console.log(data.items[currentItemId].name)
     </script>
 

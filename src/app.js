@@ -98,6 +98,47 @@ function populateCart() {
   }
 }
 
+function populateSummary() {
+  console.log(sessionStorage)
+  console.log('hot here')
+  for (var i = 0; i < sessionStorage.length; i++) {
+    console.log('fofo')
+    addSummaryItem(sessionStorage.key(i), sessionStorage[sessionStorage.key(i)])
+  }
+}
+
+function addSummaryItem(item, quantity) {
+  const summaryRow = document.createElement('div');
+  summaryRow.innerHTML =
+    `<div class="product-card">
+      <div class="card">
+        <div class="img-box">
+          <img src=` + data.items.find(e => e.name == item).imageref + ` alt="" class="product-img" />
+        </div>
+        <div class="detail">
+          <h4 class="product-name">` + item + `</h4>
+          <div class="wrapper">
+            <div class="product-qty">
+              <button id="decrement" onclick="decrementValue();">
+                <i class="fas fa-minus"></i>
+              </button>
+              <span id="` + item + `-summary">` + quantity + `</span>
+              <button id="increment" onclick="incrementValue();">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+            <div class="price">$ <span id="price">` + data.items.find(e => e.name == item).price + `</span></div>
+          </div>
+        </div>
+        <button class="product-x-btn">
+          <i class="fas fa-xmark"></i>
+        </button>
+      </div>
+    </div>`
+  console.log(summaryRow.innerHTML)
+  document.getElementById("summary").prepend(summaryRow);
+}
+
 var cashSelected = false;
 
 function toggleCash() {
@@ -157,11 +198,13 @@ function incrementValue(item) {
     if (sessionStorage.key(i) == item) {
       console.log("Found item");
       sessionStorage[sessionStorage.key(i)]++;
+      updateSummary(item, i);
     }
   }
   // let increment = Number(this.previousElementSibling.textContent);
   // increment++;
   // this.previousElementSibling.textContent = increment;
+  updateSummary(item);
   totalCalc();
 }
 
@@ -172,6 +215,7 @@ function decrementValue(item) {
     if (sessionStorage.key(i) == item) {
       console.log("Found item");
       sessionStorage[sessionStorage.key(i)]--;
+      updateSummary(item, i);
     }
   }
   // quantity--;
@@ -182,6 +226,11 @@ function decrementValue(item) {
   totalCalc();
 }
 
+function updateSummary(item, i) {
+  console.log(document.getElementById(item + '-summary').innerHTML)
+  document.getElementById(item + '-summary').innerHTML =
+    `<span id="` + item + `-summary">` + sessionStorage[sessionStorage.key(i)] + `</span>`
+}
 
 const totalCalc = function () {
   const tax = 0.13;
@@ -189,18 +238,15 @@ const totalCalc = function () {
   let totalTax = 0;
   let total = 0;
 
-  for (let i = 0; i < quantityElem.length; i++) {
-    subtotal += Number(quantityElem[i].textContent) = Number(priceElem[i].textContent);
+  for (let i = 0; i < sessionStorage.length; i++) {
+    subtotal += Number(sessionStorage[i]);
   }
-
-  subtotalElem.textContent = subtotal.toFixed(2);
 
   totalTax = subtotal * tax;
 
-  taxElem.textContent = totalTax.toFixed(2);
-
   total = subtotal + totalTax;
-
-  totalElem.textContent = total.toFixed(2);
-  payAmountBtn.textContent = total.toFixed(2);
+  
+  const totalRow = document.createElement('div');
+  totalRow.innerHTML = `<div class="total" id = "total">` + 'eee' + total + `</div>`
+  document.getElementById("myCart").append(totalRow);
 }

@@ -140,32 +140,10 @@
         </section>
         <section class="cart">
           <div class="cart-item">
-            <h2 class="section-heading">Order Summary</h2>
-            <div class="product-card">
-              <div class="card">
-                <div class="img-box">
-                  <img src="images/menu-3.jpg" alt="" class="product-img" />
-                </div>
-                <div class="detail">
-                  <h4 class="product-name">Item Name</h4>
-                  <div class="wrapper">
-                    <div class="product-qty">
-                      <button id="decrement" onclick="decrementValue();">
-                        <i class="fas fa-minus"></i>
-                      </button>
-                      <span id="quantity">1</span>
-                      <button id="increment" onclick="incrementValue();">
-                        <i class="fas fa-plus"></i>
-                      </button>
-                    </div>
-                    <div class="price">$ <span id="price">1.25</span></div>
-                  </div>
-                </div>
-                <button class="product-x-btn">
-                  <i class="fas fa-xmark"></i>
-                </button>
-              </div>
-            </div>
+            <h2 class="section-heading" id="summary">Order Summary</h2>
+            <script src="app.js"></script>
+            <script src="data.js"></script>
+            <script>populateSummary()</script>
           </div>
 
           <div class="wrapper">
@@ -191,7 +169,7 @@
       <script src="app.js"></script>
       <script src="data.js"></script>
       <script>populateCart()</script>
-      <div class="total">total : 19.69</div>
+      <script>totalCalc()</script>
       <a href="#" class="btn">Checkout</a>
     </div>
 

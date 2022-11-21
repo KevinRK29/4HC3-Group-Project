@@ -119,9 +119,14 @@ function toggleCredit() {
 }
 
 let payAmountBtn = document.querySelector('#payAmount');
-let decrementBtn = document.querySelector('#decrement');
-let quantityElem = document.querySelector('#quantity');
+
+let decrementBtn = document.querySelector("#decrement");
+decrementBtn.onclick = decrementValue;
+
 let incrementBtn = document.querySelector('#increment');
+incrementBtn.onclick = incrementValue;
+
+let quantityElem = document.querySelector('#quantity');
 let priceElem = document.querySelector('#price');
 let subtotalElem = document.querySelector('#subtotal');
 let taxElem = document.querySelector('#tax');
@@ -144,6 +149,23 @@ for (let i = 0; i < incrementBtn.length; i++) {
     //totalCalc();
   })
 }
+
+function incrementValue() {
+  console.log("Increment");
+  // let increment = Number(this.previousElementSibling.textContent);
+  // increment++;
+  // this.previousElementSibling.textContent = increment;
+  totalCalc();
+}
+
+function decrementValue() {
+  console.log("Decrement");
+  // let decrement = Number(this.previousElementSibling.textContent);
+  // decrement <= 1 ? 1 : decrement--;
+  // this.previousElementSibling.textContent = decrement;
+  totalCalc();
+}
+
 
 const totalCalc = function () {
   const tax = 0.13;

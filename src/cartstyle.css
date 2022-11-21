@@ -157,6 +157,7 @@ header .icons #menu-bars{
     color: var(--onyx);
     border-bottom: 1px solid var(--gainsboro);
     padding: 20px var(--px);
+    padding-top: 50px;
     display: flex;
     align-items: center;
     gap:20px;

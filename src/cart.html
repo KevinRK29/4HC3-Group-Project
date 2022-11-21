@@ -88,19 +88,9 @@
               <div class="input-flex">
                 <div class="expiry-date">
                   <label for="expiry-date" class="label-default"
-                    >Expiration date</label
+                    >Expiration Date (YY/DD)</label
                   >
                   <div class="input-flex">
-                    <input
-                      type="number"
-                      name="day"
-                      id="expiry-date"
-                      placeholder="31"
-                      min="1"
-                      max="31"
-                      class="input-default"
-                    />
-                    /
                     <input
                       type="number"
                       name="month"
@@ -108,6 +98,16 @@
                       placeholder="12"
                       min="1"
                       max="12"
+                      class="input-default"
+                    />
+                    /
+                    <input
+                      type="number"
+                      name="day"
+                      id="expiry-date"
+                      placeholder="31"
+                      min="1"
+                      max="31"
                       class="input-default"
                     />
                   </div>
@@ -141,11 +141,11 @@
                   <div class="wrapper">
                     <div class="product-qty">
                       <button id="decrement">
-                        <i class="fas fa-square-minus"></i>
+                        <i class="fas fa-minus"></i>
                       </button>
                       <span id="quantity">1</span>
                       <button id="increment">
-                        <i class="fas fa-square-plus"></i>
+                        <i class="fas fa-plus"></i>
                       </button>
                     </div>
                     <div class="price">$ <span id="price">1.25</span></div>
